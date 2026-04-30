@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Debashis Das — Doctoral Researcher, IIT Patna</title>
+<meta name="description" content="Debashis Das — Doctoral Research Scholar in Computer Science & Engineering at IIT Patna. Research in deep learning, image restoration, and multimodal learning." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a2e;
+    --ink-soft: #2c2c44;
+    --paper: #fafaf7;
+    --paper-warm: #f4f1ea;
+    --accent: #7a1e1e;
+    --accent-soft: #a64545;
+    --rule: #d8d4cb;
+    --muted: #6b6b7d;
+    --serif: 'Cormorant Garamond', 'Times New Roman', serif;
+    --sans: 'Inter', -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.65;
+    font-size: 16px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(26,26,46,0.04) 1px, transparent 0);
+    background-size: 24px 24px;
+  }
+
+  /* ── Layout ── */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+  }
+
+  /* ── Top Nav ── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(250, 250, 247, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--rule);
+  }
+  nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.1rem;
+    padding-bottom: 1.1rem;
+  }
+  nav .brand {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  nav .brand em { font-style: italic; color: var(--accent); }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2.2rem;
+  }
+  nav ul a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    position: relative;
+    transition: color 0.2s ease;
+  }
+  nav ul a:hover { color: var(--accent); }
+  nav ul a::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+  }
+  nav ul a:hover::after { width: 100%; }
+
+  /* ── Hero ── */
+  header.hero {
+    padding: 6rem 0 5rem;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+  header.hero::before {
+    content: '';
+    position: absolute;
+    top: 6rem;
+    left: 2.5rem;
+    width: 50px;
+    height: 1px;
+    background: var(--accent);
+  }
+  .hero-eyebrow {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--accent);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    padding-left: 70px;
+    position: relative;
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.8rem, 6vw, 4.8rem);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+  }
+  .hero h1 .accent {
+    font-style: italic;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .hero-sub {
+    font-family: var(--serif);
+    font-size: 1.55rem;
+    font-weight: 400;
+    color: var(--ink-soft);
+    margin-bottom: 2rem;
+    max-width: 720px;
+    line-height: 1.4;
+  }
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem 2rem;
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+  .hero-meta span { display: flex; align-items: center; gap: 0.5rem; }
+  .hero-meta strong { color: var(--ink); font-weight: 500; }
+
+  /* ── Sections ── */
+  section {
+    padding: 5rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .section-label {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--accent);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-size: 2.6rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 3rem;
+    letter-spacing: -0.01em;
+  }
+  .section-title em { font-style: italic; color: var(--accent); }
+
+  /* ── About ── */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  .about-photo {
+    position: sticky;
+    top: 100px;
+  }
+  .about-photo .frame {
+    aspect-ratio: 3 / 4;
+    background: var(--paper-warm);
+    border: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--muted);
+    position: relative;
+    overflow: hidden;
+  }
+  .about-photo .frame::before {
+    content: 'D.D.';
+    font-size: 5rem;
+    color: var(--accent);
+    opacity: 0.15;
+  }
+  .about-photo .caption {
+    margin-top: 1rem;
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    text-align: center;
+  }
+  .about-text p {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    margin-bottom: 1.3rem;
+  }
+  .about-text p:first-child::first-letter {
+    font-family: var(--serif);
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--accent);
+    float: left;
+    line-height: 0.85;
+    padding: 0.4rem 0.6rem 0 0;
+  }
+
+  .interests {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px dashed var(--rule);
+  }
+  .interests h3 {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .tag {
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    padding: 0.35rem 0.85rem;
+    border: 1px solid var(--rule);
+    background: var(--paper-warm);
+    color: var(--ink-soft);
+    transition: all 0.2s ease;
+  }
+  .tag:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-1px);
+  }
+
+  /* ── Research / Publications ── */
+  .pub-tabs {
+    display: flex;
+    gap: 0;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .pub-tab {
+    font-family: var(--sans);
+    font-size: 0.88rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.9rem 1.5rem;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-bottom: -1px;
+  }
+  .pub-tab:hover { color: var(--ink); }
+  .pub-tab.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+
+  .pub-list { display: none; }
+  .pub-list.active { display: block; }
+
+  .pub-item {
+    display: grid;
+    grid-template-columns: 60px 1fr auto;
+    gap: 1.5rem;
+    padding: 1.6rem 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: start;
+  }
+  .pub-item:last-child { border-bottom: none; }
+  .pub-num {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: 500;
+    padding-top: 0.3rem;
+  }
+  .pub-content h4 {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.35;
+    margin-bottom: 0.4rem;
+  }
+  .pub-content .authors {
+    font-family: var(--sans);
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    margin-bottom: 0.3rem;
+  }
+  .pub-content .authors strong {
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .pub-content .venue {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 0.98rem;
+    color: var(--muted);
+  }
+  .pub-year {
+    font-family: var(--mono);
+    font-size: 0.82rem;
+    color: var(--muted);
+    padding-top: 0.4rem;
+    white-space: nowrap;
+  }
+
+  .patent-callout {
+    background: var(--paper-warm);
+    border-left: 3px solid var(--accent);
+    padding: 1.5rem 1.8rem;
+    margin-bottom: 2.5rem;
+  }
+  .patent-callout .label {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
+  }
+  .patent-callout h4 {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+  }
+  .patent-callout p {
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+  }
+
+  /* ── CV ── */
+  .cv-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+  .cv-block h3 {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--ink);
+  }
+  .timeline-item {
+    position: relative;
+    padding: 0 0 1.8rem 1.8rem;
+    border-left: 1px solid var(--rule);
+  }
+  .timeline-item:last-child { border-left-color: transparent; padding-bottom: 0; }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 8px;
+    width: 9px;
+    height: 9px;
+    background: var(--paper);
+    border: 1.5px solid var(--accent);
+    border-radius: 50%;
+  }
+  .timeline-item .year {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    margin-bottom: 0.3rem;
+  }
+  .timeline-item h4 {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.2rem;
+    line-height: 1.3;
+  }
+  .timeline-item .institution {
+    font-family: var(--sans);
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    margin-bottom: 0.3rem;
+  }
+  .timeline-item .detail {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--muted);
+  }
+
+  .achievement-list {
+    list-style: none;
+  }
+  .achievement-list li {
+    padding: 0.8rem 0;
+    border-bottom: 1px dashed var(--rule);
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    gap: 0.8rem;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+  .achievement-list li::before {
+    content: '✦';
+    color: var(--accent);
+    font-size: 0.85rem;
+    padding-top: 0.2rem;
+  }
+  .achievement-list li:last-child { border-bottom: none; }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  .skill-card {
+    padding: 1.2rem;
+    background: var(--paper-warm);
+    border-top: 2px solid var(--accent);
+  }
+  .skill-card h4 {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
+  }
+  .skill-card p {
+    font-family: var(--serif);
+    font-size: 1rem;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin: 3rem 0;
+    border: 1px solid var(--rule);
+    background: var(--paper-warm);
+  }
+  .stat {
+    padding: 1.8rem 1.2rem;
+    text-align: center;
+    border-right: 1px solid var(--rule);
+  }
+  .stat:last-child { border-right: none; }
+  .stat .num {
+    font-family: var(--serif);
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+  .stat .label {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+  }
+
+  /* ── Service ── */
+  .service-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  .service-block h3 {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 1.2rem;
+  }
+  .service-list {
+    list-style: none;
+  }
+  .service-list li {
+    font-size: 0.92rem;
+    padding: 0.6rem 0;
+    color: var(--ink-soft);
+    border-bottom: 1px dashed var(--rule);
+    line-height: 1.5;
+  }
+  .service-list li:last-child { border-bottom: none; }
+  .service-list .quartile {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: var(--accent);
+    margin-left: 0.4rem;
+  }
+
+  /* ── Contact ── */
+  .contact-section {
+    background: var(--ink);
+    color: var(--paper);
+    border-bottom: none;
+    padding: 6rem 0;
+  }
+  .contact-section .section-label { color: var(--accent-soft); }
+  .contact-section .section-title { color: var(--paper); }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  .contact-intro {
+    font-family: var(--serif);
+    font-size: 1.45rem;
+    line-height: 1.5;
+    color: rgba(250, 250, 247, 0.85);
+    margin-bottom: 2rem;
+  }
+  .contact-intro em { color: var(--accent-soft); font-style: italic; }
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .contact-link {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 1.5rem;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid rgba(250, 250, 247, 0.15);
+    text-decoration: none;
+    color: var(--paper);
+    transition: all 0.25s ease;
+  }
+  .contact-link:hover {
+    padding-left: 1rem;
+    background: rgba(250, 250, 247, 0.03);
+  }
+  .contact-link .label {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent-soft);
+    padding-top: 0.3rem;
+  }
+  .contact-link .value {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    color: var(--paper);
+  }
+
+  /* ── Footer ── */
+  footer {
+    background: var(--ink);
+    color: rgba(250, 250, 247, 0.5);
+    padding: 2rem 0;
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+  footer span { color: var(--accent-soft); }
+
+  /* ── Animations ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .reveal {
+    animation: fadeUp 0.8s ease both;
+  }
+  .reveal-1 { animation-delay: 0.1s; }
+  .reveal-2 { animation-delay: 0.25s; }
+  .reveal-3 { animation-delay: 0.4s; }
+  .reveal-4 { animation-delay: 0.55s; }
+
+  /* ── Responsive ── */
+  @media (max-width: 768px) {
+    .container { padding: 0 1.5rem; }
+    nav ul { display: none; }
+    header.hero { padding: 4rem 0 3rem; }
+    .about-grid, .cv-grid, .service-grid, .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    .about-photo { position: static; max-width: 280px; }
+    .stats-row { grid-template-columns: repeat(2, 1fr); }
+    .stat:nth-child(2) { border-right: none; }
+    .stat:nth-child(1), .stat:nth-child(2) { border-bottom: 1px solid var(--rule); }
+    .pub-item { grid-template-columns: 30px 1fr; }
+    .pub-year { grid-column: 2; padding-top: 0; }
+    .section-title { font-size: 2rem; }
+    .pub-tabs { overflow-x: auto; }
+    .pub-tab { white-space: nowrap; padding: 0.8rem 1rem; font-size: 0.78rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ════════ NAVIGATION ════════ -->
+<nav>
+  <div class="container">
+    <a href="#" class="brand">Debashis <em>Das</em></a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#cv">CV</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ════════ HERO ════════ -->
+<header class="hero">
+  <div class="container">
+    <div class="hero-eyebrow reveal reveal-1">Doctoral Research Scholar · IIT Patna</div>
+    <h1 class="reveal reveal-2">Debashis <span class="accent">Das</span></h1>
+    <p class="hero-sub reveal reveal-3">
+      Researcher in deep learning &amp; computer vision — designing neural architectures
+      from scratch for image restoration and multimodal understanding.
+    </p>
+    <div class="hero-meta reveal reveal-4">
+      <span>📍 <strong>Patna, India</strong></span>
+      <span>🎓 <strong>Indian Institute of Technology Patna</strong></span>
+      <span>🔬 <strong>Dept. of Computer Science &amp; Engineering</strong></span>
+    </div>
+  </div>
+</header>
+
+<!-- ════════ ABOUT ════════ -->
+<section id="about">
+  <div class="container">
+    <div class="section-label">§ 01 — About</div>
+    <h2 class="section-title">A note on the <em>work</em>.</h2>
+
+    <div class="about-grid">
+      <div class="about-photo">
+        <div class="frame"></div>
+        <div class="caption">DEBASHIS DAS · Ph.D.</div>
+      </div>
+
+      <div class="about-text">
+        <p>
+          I am a doctoral research scholar in the Department of Computer Science and Engineering
+          at the Indian Institute of Technology Patna, working under the supervision of
+          Dr. Suman Kumar Maji on deep learning–based image restoration and multimodal learning.
+        </p>
+        <p>
+          My research focuses on designing and training deep neural architectures
+          <em>from scratch</em> — without reliance on pre-trained models — to tackle low-level vision
+          problems such as image denoising, transform-domain feature analysis, and audio-visual
+          question answering. I am interested in bridging classical signal-processing intuition
+          (wavelets, gradient-domain methods, frequency analysis) with modern transformer-based
+          architectures.
+        </p>
+        <p>
+          Beyond research, I serve as a teaching assistant at IIT Patna and review for several
+          IEEE and Elsevier journals, including <em>Pattern Recognition</em> and
+          <em>IEEE Transactions on Industrial Informatics</em>.
+        </p>
+
+        <div class="interests">
+          <h3>Research Interests</h3>
+          <div class="tag-list">
+            <span class="tag">Computer Vision</span>
+            <span class="tag">Deep Learning</span>
+            <span class="tag">Image Restoration</span>
+            <span class="tag">Image Denoising</span>
+            <span class="tag">Multimodal Learning</span>
+            <span class="tag">Transformer Architectures</span>
+            <span class="tag">Wavelet Analysis</span>
+            <span class="tag">Bioinformatics</span>
+          </div>
+        </div>
+
+        <div class="stats-row">
+          <div class="stat">
+            <div class="num">2+</div>
+            <div class="label">Journal Papers</div>
+          </div>
+          <div class="stat">
+            <div class="num">6</div>
+            <div class="label">Conference Papers</div>
+          </div>
+          <div class="stat">
+            <div class="num">1</div>
+            <div class="label">Patent Filed</div>
+          </div>
+          <div class="stat">
+            <div class="num">8</div>
+            <div class="label">Journals Reviewed</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ RESEARCH ════════ -->
+<section id="research">
+  <div class="container">
+    <div class="section-label">§ 02 — Research &amp; Writing</div>
+    <h2 class="section-title">Selected <em>publications</em>.</h2>
+
+    <div class="patent-callout">
+      <div class="label">Patent · Filed April 2026</div>
+      <h4>A Transformer-Based Sparse Range-Aware Audio-Visual Question Answering System and Method Thereof</h4>
+      <p><strong>Debashis Das</strong> &amp; Suman Kumar Maji · Application No. 202631050171 · Funded by IIT Patna</p>
+    </div>
+
+    <div class="pub-tabs">
+      <button class="pub-tab active" data-target="journals">Journals</button>
+      <button class="pub-tab" data-target="conferences">Conferences</button>
+    </div>
+
+    <!-- JOURNALS -->
+    <div class="pub-list active" id="journals">
+
+      <div class="pub-item">
+        <div class="pub-num">J·01</div>
+        <div class="pub-content">
+          <h4>SPCANet: Spatial, Pixel and Channel Attention Guided Deep Image Denoiser</h4>
+          <div class="authors">A. Saha, <strong>Debashis Das</strong>, S. K. Maji</div>
+          <div class="venue">Multimedia Tools and Applications (MTAP)</div>
+        </div>
+        <div class="pub-year">2026</div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-num">J·02</div>
+        <div class="pub-content">
+          <h4>MGMSDNet: Multi-Gradient Multi-Scale Attention Driven Denoiser Network</h4>
+          <div class="authors"><strong>Debashis Das</strong>, S. K. Maji</div>
+          <div class="venue">Signal Processing: Image Communication, Vol. 139, pp. 117426</div>
+        </div>
+        <div class="pub-year">2025</div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-num">J·03</div>
+        <div class="pub-content">
+          <h4>GIADNet: Gradient Inspired Attention Driven Denoising Network</h4>
+          <div class="authors">G. Chatterjee, <strong>Debashis Das</strong>, S. K. Maji</div>
+          <div class="venue">Signal Processing: Image Communication, Vol. 139, pp. 117399</div>
+        </div>
+        <div class="pub-year">2025</div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-num">J·04</div>
+        <div class="pub-content">
+          <h4>WiSSFormer: A Wavelet-Infused Spatial-Spectral Transformer for Superior Image Denoising</h4>
+          <div class="authors"><strong>Debashis Das</strong>, S. K. Maji</div>
+          <div class="venue">Manuscript</div>
+        </div>
+        <div class="pub-year">2025</div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-num">J·05</div>
+        <div class="pub-content">
+          <h4>Modified dN/dS for Accounting Transition and Transversion Frequency Difference and Non-Sense Substitution in Genomes</h4>
+          <div class="authors">R. Aziz, P. Sen, P. K. Beura, <strong>Debashis Das</strong>, et al.</div>
+          <div class="venue">bioRxiv · 2022.01.22.477328</div>
+        </div>
+        <div class="pub-year">2022</div>
+      </div>
+
+    </div>
+
+    <!-- CONFERENCES -->
+    <div class="pub-list" id="conferences">
+
+      <div class="pub-item">
+        <div class="pub-num">C·01</div>
+        <div class="pub-content">
+          <h4>WGSANet: Wavelet and Gradient Synergistic Attentive Fusion Network for Image Denoising</h4>
+          <div class="authors"><strong>Debashis Das</strong>, S. K. Maji</div>
+          <div class="venue">IEEE WCCI 2026 — IJCNN, Maastricht, Netherlands</div>
+        </div>
+        <div class="pub-year">2026</div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-num">C·02</div>
+        <div class="pub-content">
+          <h4>PMDRNet: Parallel Multi-Domain Residual Network with Correlated Encoding for Image Denoising</h4>
+          <div class="authors">A. Saha, <strong>Debashis Das</strong>, S. K. Maji</div>
+          <div class="venue">IEEE WCCI 2026 — IJCNN, Maastricht, Netherlands</div>
+        </div>
+        <div class="pub-year">2026</div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-num">C·03</div>
+        <div class="pub-content">
+          <h4>MAGLFormer: Multi-Attention Global-Local Feature Controlled Transformer for Unified Image Restoration</h4>
+          <div class="authors">M. H. Kankhara, R. Vasaikar, K. Tripathi, <strong>Debashis Das</strong></div>
+          <div class="venue">5th Intl. Conf. on Smart Systems: Innovations in Computing (SSIC)</div>
+        </div>
+        <div class="pub-year">2025</div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-num">C·04</div>
+        <div class="pub-content">
+          <h4>MDFIDNet: Multi-Domain Feature Integration Denoising Network</h4>
+          <div class="authors"><strong>Debashis Das</strong>, S. K. Maji</div>
+          <div class="venue">27th International Conference on Pattern Recognition (ICPR)</div>
+        </div>
+        <div class="pub-year">2024</div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-num">C·05</div>
+        <div class="pub-content">
+          <h4>Gradient-Infused Multi-Scale Attention Based CNN for Robust Image Denoising</h4>
+          <div class="authors"><strong>Debashis Das</strong>, A. Aryaman, D. N. K. S, S. K. Maji</div>
+          <div class="venue">2024 IEEE 21st India Council Intl. Conf. (INDICON), pp. 1–6</div>
+        </div>
+        <div class="pub-year">2024</div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-num">C·06</div>
+        <div class="pub-content">
+          <h4>Gene Essentiality Mediated Base Substitution in Escherichia coli Genome: Machine Learning Analysis</h4>
+          <div class="authors">A. Kurmi, <strong>Debashis Das</strong>, P. Sen, S. K. Ray, S. S. Satapathy</div>
+          <div class="venue">MESIICON, Durgapur, India</div>
+        </div>
+        <div class="pub-year">2022</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════ CV ════════ -->
+<section id="cv">
+  <div class="container">
+    <div class="section-label">§ 03 — Curriculum Vitae</div>
+    <h2 class="section-title">Education &amp; <em>experience</em>.</h2>
+
+    <div class="cv-grid">
+      <div class="cv-block">
+        <h3>Education</h3>
+
+        <div class="timeline-item">
+          <div class="year">JUL 2022 — PRESENT</div>
+          <h4>Doctor of Philosophy (Ph.D.)</h4>
+          <div class="institution">Indian Institute of Technology Patna</div>
+          <div class="detail">Computer Science &amp; Engineering · Deep Learning-based Image Restoration &amp; Multimodal Learning · Supervisor: Dr. Suman Kumar Maji</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="year">2020 — 2022</div>
+          <h4>Master of Technology (M.Tech)</h4>
+          <div class="institution">Tezpur University · CGPA 8.50</div>
+          <div class="detail">Thesis: Nucleotide Polymorphism and Gene Essentiality — A Machine Learning Analysis</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="year">2016 — 2020</div>
+          <h4>Bachelor of Technology (B.Tech)</h4>
+          <div class="institution">Central Institute of Technology Kokrajhar · CGPA 7.12</div>
+          <div class="detail">Thesis: Topic Modeling</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="year">2013 — 2015</div>
+          <h4>Higher Secondary (Science)</h4>
+          <div class="institution">Shrimanta Shankar Academy, Panbazar (AHSEC)</div>
+          <div class="detail">70.20%</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="year">2013</div>
+          <h4>Secondary (10th)</h4>
+          <div class="institution">Damdama Higher Secondary School (SEBA)</div>
+          <div class="detail">79.50%</div>
+        </div>
+      </div>
+
+      <div class="cv-block">
+        <h3>Awards &amp; Recognition</h3>
+        <ul class="achievement-list">
+          <li>Anundoram Borooah Award 2013, Government of Assam</li>
+          <li>AICTE Postgraduate Fellowship through GATE — M.Tech (2020–22), Tezpur University</li>
+          <li>Postgraduate Fellowship through GATE — Ph.D. (2022–present), IIT Patna</li>
+          <li>Selected for national educational tour sponsored by the Indian Army (Red Horns Division)</li>
+          <li>Paper presentation at 21st IEEE INDICON, 2024</li>
+          <li>Research poster at 27th International Conference on Pattern Recognition (ICPR), 2024</li>
+        </ul>
+
+        <h3 style="margin-top: 2.5rem;">Mentorship</h3>
+        <ul class="achievement-list">
+          <li>Harshit Tomar (2025–26) — now at Zomato · Denoising &amp; Diffusion</li>
+          <li>Shivam K. Singh (2024–25) — Assistant Engineer, BEL · DL Image Denoising</li>
+          <li>Nairutya Patel (2024–25) — Graduate Researcher · DL Image Denoising</li>
+          <li>Rahul Maurya (2024–25) — Graduate Researcher · Denoising &amp; Diffusion</li>
+          <li>Gaurab Chatterjee (2023–24) — Data Scientist, Expressway · DL &amp; Image Processing</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Teaching -->
+    <div style="margin-top: 4rem;">
+      <h3 style="font-family: var(--serif); font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--ink);">Teaching Assistantships</h3>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h4>IIT Patna</h4>
+          <p>Operating Systems · Foundations of Computer Systems · Computer Graphics · C Programming · Computer Vision · Computer Systems Lab</p>
+        </div>
+        <div class="skill-card">
+          <h4>Tezpur University</h4>
+          <p>Computer Architecture &amp; Organization · Data Structures (B.Tech 2nd Year)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <div style="margin-top: 4rem;">
+      <h3 style="font-family: var(--serif); font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--ink);">Technical Expertise</h3>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h4>Computer Vision</h4>
+          <p>Image restoration, low-level vision, visual quality enhancement</p>
+        </div>
+        <div class="skill-card">
+          <h4>Image Processing</h4>
+          <p>Wavelets, frequency-domain analysis, transform theory</p>
+        </div>
+        <div class="skill-card">
+          <h4>Deep Learning</h4>
+          <p>CNNs and Transformers, designed and trained from scratch</p>
+        </div>
+        <div class="skill-card">
+          <h4>Multimodal</h4>
+          <p>AVQA, cross-modal fusion, representation learning</p>
+        </div>
+        <div class="skill-card">
+          <h4>Languages</h4>
+          <p>Python, Java, C, VB.Net</p>
+        </div>
+        <div class="skill-card">
+          <h4>Tools</h4>
+          <p>PyTorch, MATLAB, OpenCV, LaTeX, Linux/Bash</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service -->
+    <div style="margin-top: 4rem;">
+      <h3 style="font-family: var(--serif); font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--ink);">Professional Service</h3>
+      <div class="service-grid">
+        <div class="service-block">
+          <h3 style="border: none; padding: 0; font-size: 1.1rem;">Journal Reviewer</h3>
+          <ul class="service-list">
+            <li>IEEE Transactions on Computational Social Systems<span class="quartile">Q1</span></li>
+            <li>IEEE Transactions on Industrial Informatics<span class="quartile">Q1</span></li>
+            <li>Pattern Recognition<span class="quartile">Q1</span></li>
+            <li>Engineering Applications of Artificial Intelligence<span class="quartile">Q1</span></li>
+            <li>Pattern Recognition Letters<span class="quartile">Q1</span></li>
+            <li>Multimedia Tools and Applications<span class="quartile">Q1</span></li>
+            <li>The Journal of Supercomputing<span class="quartile">Q2</span></li>
+          </ul>
+        </div>
+        <div class="service-block">
+          <h3 style="border: none; padding: 0; font-size: 1.1rem;">Conference Reviewer &amp; PC</h3>
+          <ul class="service-list">
+            <li>IJCNN (IEEE WCCI 2026)</li>
+            <li>ICPR 2026 &amp; 2024</li>
+            <li>3rd IACOP 2025</li>
+            <li>3rd IEEE iSSSC 2025</li>
+            <li>11th PReMI 2025</li>
+            <li>6th IEEE INDISCON 2025</li>
+            <li>SSIC 2025 — Program Committee Member</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ CONTACT ════════ -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <div class="section-label">§ 04 — Contact</div>
+    <h2 class="section-title">Let's <em>collaborate</em>.</h2>
+
+    <div class="contact-grid">
+      <div>
+        <p class="contact-intro">
+          I welcome conversations on <em>computer vision</em>, <em>image restoration</em>,
+          and <em>multimodal learning</em> — whether you're a fellow researcher,
+          a prospective collaborator, or a student looking for guidance.
+        </p>
+        <p style="font-family: var(--mono); font-size: 0.85rem; color: var(--accent-soft); letter-spacing: 0.08em;">
+          IIT PATNA · BIHTA · BIHAR · INDIA
+        </p>
+      </div>
+
+      <div class="contact-links">
+        <a href="mailto:debashis.2221cs31@iitp.ac.in" class="contact-link">
+          <span class="label">Academic</span>
+          <span class="value">debashis.2221cs31@iitp.ac.in</span>
+        </a>
+        <a href="mailto:ddebashisdas2108@gmail.com" class="contact-link">
+          <span class="label">Personal</span>
+          <span class="value">ddebashisdas2108@gmail.com</span>
+        </a>
+        <a href="https://github.com/debashis15" target="_blank" rel="noopener" class="contact-link">
+          <span class="label">GitHub</span>
+          <span class="value">@debashis15</span>
+        </a>
+        <a href="#" class="contact-link">
+          <span class="label">LinkedIn</span>
+          <span class="value">View Profile →</span>
+        </a>
+        <a href="#" class="contact-link">
+          <span class="label">Scholar</span>
+          <span class="value">Google Scholar →</span>
+        </a>
+        <a href="tel:+918134845821" class="contact-link">
+          <span class="label">Phone</span>
+          <span class="value">+91 81348 45821</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ FOOTER ════════ -->
+<footer>
+  <div class="container">
+    © 2026 DEBASHIS DAS · CRAFTED WITH <span>♦</span> AT IIT PATNA
+  </div>
+</footer>
+
+<script>
+  // Publication tab switching
+  const tabs = document.querySelectorAll('.pub-tab');
+  const lists = document.querySelectorAll('.pub-list');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.target;
+      tabs.forEach(t => t.classList.remove('active'));
+      lists.forEach(l => l.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById(target).classList.add('active');
+    });
+  });
+
+  // Scroll-triggered reveal for sections
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animation = 'fadeUp 0.8s ease both';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('section').forEach(s => {
+    s.style.opacity = '0';
+    s.style.animationFillMode = 'both';
+    observer.observe(s);
+    // Fallback: ensure visible after observer fires
+    setTimeout(() => s.style.opacity = '1', 100);
+  });
+</script>
+
+</body>
+</html>
